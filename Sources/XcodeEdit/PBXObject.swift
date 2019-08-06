@@ -68,7 +68,7 @@ public class PBXProject : PBXContainer {
     public let ProjectRef: Reference<PBXFileReference>
 
     public required init(fields: Fields, allObjects: AllObjects) throws {
-      self.ProductGroup = allObjects.createReference(id: try fields.id("ProductGroup"))
+      self.ProductGroup = allObjects.createReference(id: Guid("foo"))//allObjects.createReference(id: try fields.id("ProductGroup"))
       self.ProjectRef = allObjects.createReference(id: try fields.id("ProjectRef"))
     }
   }
